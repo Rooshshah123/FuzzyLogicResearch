@@ -79,3 +79,11 @@ Or, use programmatically:
 
 fis = readfis('research_final_1.fis');
 output = evalfis(fis, [temperature, headache, jointPain, ...]);
+
+Roosh Shah
+Roll No: 22BEI057
+Department of Electronics and Instrumentation, Nirma University
+Guide: Dr. Arvind Yadav
+
+GitHub: @Rooshshah123
+
