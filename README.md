@@ -72,7 +72,10 @@ The project successfully models a **Fuzzy Logic–based Medical Diagnosis System
 
 ## 💡 Usage
 To open and test the fuzzy system:
-```matlab
+matlab
 fuzzyLogicDesigner('research_final_1.fis')
-The rule base is designed using medical knowledge.  
-Example:
+
+Or, use programmatically:
+
+fis = readfis('research_final_1.fis');
+output = evalfis(fis, [temperature, headache, jointPain, ...]);
