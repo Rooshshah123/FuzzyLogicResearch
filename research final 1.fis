@@ -1,0 +1,142 @@
+[System]
+Name='research final 1'
+Type='mamdani'
+Version=2.0
+NumInputs=14
+NumOutputs=6
+NumRules=6
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Temperature'
+Range=[0 130]
+NumMFs=2
+MF1='100-106':'trimf',[100 103 106]
+MF2='Morethan106':'trimf',[106 108 120]
+
+[Input2]
+Name='Headache '
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[-200 0.5 0.5]
+
+[Input3]
+Name='Joint/Muscle Pain'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[-220 0.5 0.5]
+
+[Input4]
+Name='Abdominal Pain'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[-200 0.5 0.5]
+
+[Input5]
+Name='Vomitting '
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[-200 0.5 0.5]
+
+[Input6]
+Name='Dark Urine'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[-200 0.5 0.5]
+
+[Input7]
+Name='Yellow Eyes'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[-200 0.5 0.5]
+
+[Input8]
+Name='Cough'
+Range=[0 1]
+NumMFs=2
+MF1='3 weeks':'trimf',[0 0.3 0.5]
+MF2='More than 3 weeks':'trimf',[0.5 0.7 1]
+
+[Input9]
+Name='NoAppetite'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[-200 0.5 0.5]
+
+[Input10]
+Name='Chest Pain'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[-200 0.5 0.5]
+
+[Input11]
+Name='Chills'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[-200 0.5 0.5]
+
+[Input12]
+Name='Dehyderation'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[-200 0.5 0.5]
+
+[Input13]
+Name='Cramping'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[-200 0.5 0.5]
+
+[Input14]
+Name='Pain Behind Eyes'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[-200 0.5 0.5]
+
+[Output1]
+Name='Viral Fever'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[0 0.5 1]
+
+[Output2]
+Name='Dengue Fever'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[0 0.5 1]
+
+[Output3]
+Name='Hepatitis'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[0 0.5 1]
+
+[Output4]
+Name='Tubercolosis'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[0 0.5 1]
+
+[Output5]
+Name='Maleria'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[0 0.5 1]
+
+[Output6]
+Name='Diarrhea'
+Range=[0 1]
+NumMFs=1
+MF1='mf1':'trimf',[0 0.5 1]
+
+[Rules]
+1 1 0 0 0 0 0 0 0 0 1 0 0 0, 1 0 0 0 0 0 (1) : 1
+2 1 1 0 1 0 0 0 0 0 0 0 0 1, 0 1 0 0 0 0 (1) : 1
+1 0 0 1 0 1 1 0 1 0 0 0 0 0, 0 0 1 0 0 0 (1) : 1
+1 0 0 0 0 0 0 2 0 1 0 0 0 0, 0 0 0 1 0 0 (1) : 1
+2 1 1 0 0 0 0 0 0 0 1 0 0 0, 0 0 0 0 1 0 (1) : 1
+1 0 0 1 1 0 0 0 0 0 0 1 1 0, 0 0 0 0 0 1 (1) : 1
